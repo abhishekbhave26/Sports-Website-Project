@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="keywords" content="VSPORTS,Registration">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title> VSPORTS PVT LTD</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<div class="basic">
+VSPORTS PVT LTD
+</div>
+<a href="index.html"><div class="option1">HOME </div></a> 
+<a href="products.html"><div class="option2">Our Products</div></a> 
+<a href="about.html"><div class="option3">About Us</div></a>
+</head>
+<body>
+<form action="loggedin.html" id="regform">
+<div id="reg">
+<fieldset> <legend> Registration Form :</legend>
+  <br> First Name:<br>
+  <input type="text" name="firstname" placeholder="First Name" required autofocus>
+  <br><br>
+  Last Name:<br>
+  <input type="text" name="lastname" placeholder="Last Name" required>
+  <br><br>
+  <input type="radio" name="gender" value="male">Male<br>
+  <input type="radio" name="gender" value="female">Female<br>
+  <br>
+  Birthday:
+  <input type="date" name="bday" required>
+  <br>
+  <br>
+  E-mail:<br>
+  <input type="email" name="email" required>
+  <br>
+  <br>
+  User Name:<br>
+  <input type="text" name="username" required ><br><br>
+  User Password:<br>
+  <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"name="psw" required>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Clear">
+  </fieldset>
+  </div>
+  </form>
+  <div id="w3-content">
+  <img class="mySlides" src="1.jpg" style="height:450px; width:700px;">
+  <img class="mySlides" src="2.jpg" style="height:450px; width:700px;">
+  <img class="mySlides" src="3.jpg" style="height:450px; width:700px;">
+  <img class="mySlides" src="4.jpg" style="height:450px; width:700px;">
+  <button class="w3-button w3-display-left" id="left_button" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" id="right_button" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+ <script type="text/javascript">
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) 
+ {
+  showDivs(slideIndex += n);
+ }
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) 
+  {
+  slideIndex = 1
+  }    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) 
+  {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
